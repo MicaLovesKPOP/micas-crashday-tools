@@ -1,4 +1,4 @@
-# Mica's Crashday Tools: P3D Validator v0.4
+# Mica's Crashday Tools: P3D Validator v0.4.0
 
 Read-only, independent Python 3.7+ validator for Crashday P3D2 files.
 No Blender, Crashday runtime, third-party Python packages or game asset downloads required.
@@ -22,5 +22,5 @@ availability of actual textures, authored world placement, destruction or AI beh
 Run only on data you have the right to access. No game assets are bundled.
 Community-made and unaffiliated with the Crashday developers.
 
-## Proposed license
-GPL-3.0-or-later (pending first-public rights-holder signoff). See LICENSE and NOTICE.md.
+## License
+GPL-3.0-or-later. See LICENSE and NOTICE.md for the full grant and attribution.
