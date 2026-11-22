@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+out/
+.cache/
+*.blend
+*.blend1
+*.p3d
+*.cfl
+*.trk
+*.tga
+*.dds
+*.cpk
+*.zip
+*.bin
