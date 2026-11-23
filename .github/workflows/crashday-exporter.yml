@@ -6,15 +6,21 @@ on:
       - 'scripts/build_crashday_exporter.py'
       - 'tests/test_crashday_exporter_smoke.py'
       - '.github/workflows/crashday-exporter.yml'
+      - '.gitattributes'
   pull_request:
     paths:
       - 'addons/crashday-exporter/**'
       - 'scripts/build_crashday_exporter.py'
       - 'tests/test_crashday_exporter_smoke.py'
       - '.github/workflows/crashday-exporter.yml'
+      - '.gitattributes'
 jobs:
   source-smoke:
-    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

@@ -5,11 +5,13 @@ on:
       - 'utilities/p3d-validator/**'
       - 'tests/**'
       - '.github/workflows/p3d-validator.yml'
+      - '.gitattributes'
   pull_request:
     paths:
       - 'utilities/p3d-validator/**'
       - 'tests/**'
       - '.github/workflows/p3d-validator.yml'
+      - '.gitattributes'
 jobs:
   smoke:
     strategy:

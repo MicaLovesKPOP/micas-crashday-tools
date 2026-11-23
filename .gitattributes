@@ -1,4 +1,6 @@
-# Keep pinned Wurunduk source/license byte-for-byte (historical CRLF) for GPL attribution and reproducible ZIPs.
+# Keep first-party importer source LF on Windows/Linux: v0.1.0 SHA-pinned public package.
+addons/crashday-exporter/crashday_track_importer/*.py text eol=lf
+# Preserve pinned Wurunduk source/license byte-for-byte (historical CRLF).
 addons/crashday-exporter/LICENSE -text
 addons/crashday-exporter/crashday_track_importer/LICENSE_WURUNDUK_P3D.txt -text
 addons/crashday-exporter/crashday_track_importer/wurunduk_p3d.py -text
