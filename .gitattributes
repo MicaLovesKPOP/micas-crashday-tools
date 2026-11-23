@@ -1,0 +1,4 @@
+# Keep pinned Wurunduk source/license byte-for-byte (historical CRLF) for GPL attribution and reproducible ZIPs.
+addons/crashday-exporter/LICENSE -text
+addons/crashday-exporter/crashday_track_importer/LICENSE_WURUNDUK_P3D.txt -text
+addons/crashday-exporter/crashday_track_importer/wurunduk_p3d.py -text

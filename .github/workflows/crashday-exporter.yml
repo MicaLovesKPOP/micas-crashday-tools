@@ -1,0 +1,24 @@
+name: Crashday Exporter source and packaging smoke
+on:
+  push:
+    paths:
+      - 'addons/crashday-exporter/**'
+      - 'scripts/build_crashday_exporter.py'
+      - 'tests/test_crashday_exporter_smoke.py'
+      - '.github/workflows/crashday-exporter.yml'
+  pull_request:
+    paths:
+      - 'addons/crashday-exporter/**'
+      - 'scripts/build_crashday_exporter.py'
+      - 'tests/test_crashday_exporter_smoke.py'
+      - '.github/workflows/crashday-exporter.yml'
+jobs:
+  source-smoke:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check pinned source and deterministic release
+        run: python -m unittest discover -s tests -v
