@@ -1,0 +1,474 @@
+{
+  "schema": "micas-crashday-package-layouts/v1",
+  "modules": [
+    {
+      "id": "crashday-exporter",
+      "tag": "exporter-v0.1.0",
+      "stamp": [
+        2026,
+        11,
+        23,
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "source": "CHANGELOG.md",
+          "archive": "crashday_track_importer/CHANGELOG.md",
+          "sha256": "3a3bf1dc3d7c2edbeb083bc1339a365d041c44e6959c7c23bb20cd8be0034f22",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "LICENSE",
+          "archive": "crashday_track_importer/LICENSE",
+          "sha256": "f3d0f98935410a5196f0df27c4928a86a1822e6b9f49f9312fefb08b35e1e07c",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "crashday_track_importer/LICENSE_WURUNDUK_P3D.txt",
+          "archive": "crashday_track_importer/LICENSE_WURUNDUK_P3D.txt",
+          "sha256": "f3d0f98935410a5196f0df27c4928a86a1822e6b9f49f9312fefb08b35e1e07c",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "NOTICE.md",
+          "archive": "crashday_track_importer/NOTICE.md",
+          "sha256": "1d08044803c80086a0e84fbd33fb34fabe4204ec25c482590026d8f51605163a",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "README.md",
+          "archive": "crashday_track_importer/README.md",
+          "sha256": "46e63c7570677e9d9333478216eafc2fe683c9c3ea630f784c1381fa7af046fe",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/__init__.py",
+          "archive": "crashday_track_importer/__init__.py",
+          "sha256": "6c9719638092b0e322f35a35ce542560aaf5f2aa7c06c3a55423d13d041e7b2c",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/asset_library.py",
+          "archive": "crashday_track_importer/asset_library.py",
+          "sha256": "bb1f6cff620f295530fe935b540dde913533a3ceed8c2d898be36f20a1df5b3e",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/blender_scene.py",
+          "archive": "crashday_track_importer/blender_scene.py",
+          "sha256": "6f3b78decfc6a4a6637ad522d5654e680307da9047ac6b5193d71d5819356d99",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/geometry.py",
+          "archive": "crashday_track_importer/geometry.py",
+          "sha256": "143c7987975c9b416e226618854b08472f921820cc51c70534df8b719f81ec1c",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/import_diagnostics.py",
+          "archive": "crashday_track_importer/import_diagnostics.py",
+          "sha256": "7225217c8d12caaf663f5393db4696dd97e65d8fec15c40e04076c4194d39ff0",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/trk_probe.py",
+          "archive": "crashday_track_importer/trk_probe.py",
+          "sha256": "5b662247947a2b174845486ccd3b0fd0422c5e9c2f5cf38a2a770bf8b891da08",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_track_importer/wurunduk_p3d.py",
+          "archive": "crashday_track_importer/wurunduk_p3d.py",
+          "sha256": "ba3bffa53305b82ba7256215b8b3bf624a05e9374436403f514549277ae13206",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        }
+      ]
+    },
+    {
+      "id": "tile-splitter",
+      "tag": "tile-splitter-v0.4.7",
+      "stamp": [
+        2026,
+        11,
+        25,
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "source": "CHANGELOG.md",
+          "archive": "crashday_tile_splitter/CHANGELOG.md",
+          "sha256": "4e9f9cb87dd643bf7ea3ec4b14da81d2c408065be530d303cec1534585f2232e",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "LICENSE",
+          "archive": "crashday_tile_splitter/LICENSE",
+          "sha256": "f3d0f98935410a5196f0df27c4928a86a1822e6b9f49f9312fefb08b35e1e07c",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "NOTICE.md",
+          "archive": "crashday_tile_splitter/NOTICE.md",
+          "sha256": "b2b2f83091077748ace857b4ba7cccc28c567ea7be6c08207065d4bc64544474",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "README.md",
+          "archive": "crashday_tile_splitter/README.md",
+          "sha256": "a694b14e35dfee9810c9aa3ca55bcb91b535b919d1f5a60105c2f230c6b4424b",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "SOURCE_MANIFEST.json",
+          "archive": "crashday_tile_splitter/SOURCE_MANIFEST.json",
+          "sha256": "70c49c42efae76a72c8b0540b359bb01f2eacff92f7c0b3f73f931578b56c509",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_tile_splitter/__init__.py",
+          "archive": "crashday_tile_splitter/__init__.py",
+          "sha256": "2aedace815284d328ff3d1fc92c099cf7653fbc5e42a887cd4fee594563ffb56",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_tile_splitter/native_tile_preview.py",
+          "archive": "crashday_tile_splitter/native_tile_preview.py",
+          "sha256": "8fcd6b2b46a861a2d533ec25e4de914b7ce258449de7d0cb0cdebe68c35b0bc9",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_tile_splitter/p3d_export.py",
+          "archive": "crashday_tile_splitter/p3d_export.py",
+          "sha256": "3e74da29146558f2680d39c5672490263aa4f917f2dfc34145cc522d715a155c",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_tile_splitter/preview_render.py",
+          "archive": "crashday_tile_splitter/preview_render.py",
+          "sha256": "9b5261fde04f422ed5e508c976c2de382d3efddef523740776788228009f8caa",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_tile_splitter/texture_export.py",
+          "archive": "crashday_tile_splitter/texture_export.py",
+          "sha256": "4f80c2eaaf3c83172b82101f4b2a69d4b3340436d815a0f14a269442478b8a42",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        }
+      ]
+    },
+    {
+      "id": "world-builder",
+      "tag": "world-builder-v0.2.0",
+      "stamp": [
+        2026,
+        11,
+        25,
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "source": "CHANGELOG.md",
+          "archive": "crashday_world_builder/CHANGELOG.md",
+          "sha256": "8fbec96d4275149cb2718bde26cd3614ac9e4dfe7049f5864a73c5a1222d8db3",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "LICENSE",
+          "archive": "crashday_world_builder/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "NOTICE.md",
+          "archive": "crashday_world_builder/NOTICE.md",
+          "sha256": "b1ee7b51b2433477ecd1f59d26d23f329362d6f25d5ba86e5211100c008ede51",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "README.md",
+          "archive": "crashday_world_builder/README.md",
+          "sha256": "b185b621b4cdecdff570e773d5863d8abbca2ca0942fb52b0cfc2a68d6e7ced0",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "SOURCE_MANIFEST.json",
+          "archive": "crashday_world_builder/SOURCE_MANIFEST.json",
+          "sha256": "471764290ac94704fa7bfe5953ccc39a5e4dd72fa3f7c15af9823a8be430b3f4",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/__init__.py",
+          "archive": "crashday_world_builder/__init__.py",
+          "sha256": "4321408eb24c8b77233acf25c7688b7e63f832e83d9f18166a18f3f4d93ac747",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/build_ui_model.py",
+          "archive": "crashday_world_builder/build_ui_model.py",
+          "sha256": "eac9baa166d815002e2c6626e2a3cc91dce304a8d70c774a1ab0de41819199f9",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/checkpoint_routes.py",
+          "archive": "crashday_world_builder/checkpoint_routes.py",
+          "sha256": "31bc0a7b416f2f61b39bda32cf0ae0e9400fa52021bdeff32aa31764c05b873c",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/macro_preview.py",
+          "archive": "crashday_world_builder/macro_preview.py",
+          "sha256": "87f7b444a131648fdf206371292882fd17307dde508db1a9cd02c935d2a55fae",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/__init__.py",
+          "archive": "crashday_world_builder/offline_backend/__init__.py",
+          "sha256": "f12630835b06fb7aa2f850c6b126119fa60b830865a7a5c0b10c8c39e3a21961",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/author_trk_offline.py",
+          "archive": "crashday_world_builder/offline_backend/author_trk_offline.py",
+          "sha256": "b15836a74d98aab52512848e58d8c6fe83dda738fb5dbe85dd0c8b83de88a677",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/blender_checkpoint_carve.py",
+          "archive": "crashday_world_builder/offline_backend/blender_checkpoint_carve.py",
+          "sha256": "b20467eb4e39e37673e9aeb6bdc7a52334b7c5d4239484882687a887c401104d",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/build_route_world.py",
+          "archive": "crashday_world_builder/offline_backend/build_route_world.py",
+          "sha256": "5e8f59722456e89b1b621e525c7ead4e7a158c23729c89ec9078eef9ccb960f2",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/checkpoint_macro_carve.py",
+          "archive": "crashday_world_builder/offline_backend/checkpoint_macro_carve.py",
+          "sha256": "1eb2a63fdd9aef1091055bc0fd125b9f3d5bb3da9e37cc4558332d536e7aa762",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/checkpoint_routes.py",
+          "archive": "crashday_world_builder/offline_backend/checkpoint_routes.py",
+          "sha256": "7b88559c074b01c085424f989167dacf35ad558bdfa666e6b8985a8a738b5fef",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/macro_native_layout.py",
+          "archive": "crashday_world_builder/offline_backend/macro_native_layout.py",
+          "sha256": "cad69676f18ce42dbd6ae36033e64e47b31c521398df15284e701d0f09e04cbe",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/native_tile_preview.py",
+          "archive": "crashday_world_builder/offline_backend/native_tile_preview.py",
+          "sha256": "8fcd6b2b46a861a2d533ec25e4de914b7ce258449de7d0cb0cdebe68c35b0bc9",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/source_tex_stage.py",
+          "archive": "crashday_world_builder/offline_backend/source_tex_stage.py",
+          "sha256": "fdb40bce3e359d3c9c7051a07857fd854c933f49945d86c0121575f231c9ac4d",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/source_tga_stage.py",
+          "archive": "crashday_world_builder/offline_backend/source_tga_stage.py",
+          "sha256": "9172b4d643437bef8f2dc5523d8186fec682cf71e57b833a9664fa6e1d1ad864",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/source_tile_preview_stage.py",
+          "archive": "crashday_world_builder/offline_backend/source_tile_preview_stage.py",
+          "sha256": "da55626a58604d8eaa0c22ef25ec824ebefda338c544dd7878034b5192e8ddc4",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/stage_tile_cfls.py",
+          "archive": "crashday_world_builder/offline_backend/stage_tile_cfls.py",
+          "sha256": "ca394888e2295b5a4a5c3e3e3d119adfb981949cdb9605b410617e1ec771b644",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/offline_backend/validate_p3d.py",
+          "archive": "crashday_world_builder/offline_backend/validate_p3d.py",
+          "sha256": "183378d33f40fbae9ded1d9692435f131e23fb5d8ad596fcc66e6eb4cd8953fb",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/route_ui_model.py",
+          "archive": "crashday_world_builder/route_ui_model.py",
+          "sha256": "b2c5052fd5c53fc1297dc3bbb44468194d3aa4c57ba1fdd54a3b3a0d9270d9b0",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "crashday_world_builder/viewport_routes.py",
+          "archive": "crashday_world_builder/viewport_routes.py",
+          "sha256": "b6aad92a344b0525e97834d27fda355a1c64e7652267c598ab16719a8b72b58e",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        }
+      ]
+    },
+    {
+      "id": "p3d-validator",
+      "tag": "p3d-validator-v0.4.0",
+      "stamp": [
+        2026,
+        11,
+        22,
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "source": "CHANGELOG.md",
+          "archive": "p3d_validator/CHANGELOG.md",
+          "sha256": "65a4a162e9141f4e83767734b8ddca0cc80966ce15fb590fde4d0bb8f1b41d5a",
+          "line_endings": "crlf",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "LICENSE",
+          "archive": "p3d_validator/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "NOTICE.md",
+          "archive": "p3d_validator/NOTICE.md",
+          "sha256": "1e901c33252fc3e8250915d193e93849d06c0bcb768d72e6036abc9e322f9f1d",
+          "line_endings": "crlf",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "README.md",
+          "archive": "p3d_validator/README.md",
+          "sha256": "f821204d2e27714910d919ac3f2f085109dbe982d909e29a71ee001330bd8a2f",
+          "line_endings": "crlf",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "validate_p3d.py",
+          "archive": "p3d_validator/validate_p3d.py",
+          "sha256": "7b0a9279336edae5dbcf9b858a57698a5ea55b91d67c2d6f39580b98dac77ffd",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        }
+      ]
+    },
+    {
+      "id": "world-asset-preflight",
+      "tag": "world-asset-preflight-v0.2",
+      "stamp": [
+        2024,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "source": "README.md",
+          "archive": "world_asset_preflight/README.md",
+          "sha256": "fbda4f5e3f52b2199f101626939869e238cf0742922e38ad13f1554e17ffab15",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "validate_world_assets.py",
+          "archive": "world_asset_preflight/validate_world_assets.py",
+          "sha256": "b08d34978adf56364a562423017acdbb2f6e97e17fc57517aafcefb0dca98c50",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "asset_library.py",
+          "archive": "world_asset_preflight/asset_library.py",
+          "sha256": "f690e712b0eaa3a35f0c907a76e57667e5c3f70ee6c981f34979f01fa66fd764",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "LICENSE",
+          "archive": "world_asset_preflight/LICENSE",
+          "sha256": "d0e58fabf3d1d1b24d99845d9d361bebacd454ea169970954ef6b2e885df02db",
+          "line_endings": "exact",
+          "locked_in_candidate": true
+        },
+        {
+          "source": "NOTICE.md",
+          "archive": "world_asset_preflight/NOTICE.md",
+          "sha256": "3187c6863a4ca9252772df116cba4477f8be7b4ae377ac79da09d830f0582b75",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        },
+        {
+          "source": "CHANGELOG.md",
+          "archive": "world_asset_preflight/CHANGELOG.md",
+          "sha256": "46dc7b740d890df5127cfe328158e3a6c9cb61e72534bb9852e6e533745a4d10",
+          "line_endings": "exact",
+          "locked_in_candidate": false
+        }
+      ]
+    }
+  ]
+}

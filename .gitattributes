@@ -11,3 +11,8 @@ utilities/world-asset-preflight/** -text
 # Preserve exact paired release source and document bytes.
 addons/tile-splitter/** -text
 addons/world-builder/** -text
+
+# Preserve exact source blobs across checkout settings; package_tool handles
+# three historical Validator document CRLF transformations explicitly.
+addons/crashday-exporter/** -text
+utilities/p3d-validator/** -text
