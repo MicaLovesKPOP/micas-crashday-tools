@@ -4,3 +4,6 @@ addons/crashday-exporter/crashday_track_importer/*.py text eol=lf
 addons/crashday-exporter/LICENSE -text
 addons/crashday-exporter/crashday_track_importer/LICENSE_WURUNDUK_P3D.txt -text
 addons/crashday-exporter/crashday_track_importer/wurunduk_p3d.py -text
+
+# Preserve the independently qualified Preflight release bytes.
+utilities/world-asset-preflight/** -text

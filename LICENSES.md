@@ -1,5 +1,7 @@
 # License scopes
 
+- [World Asset Preflight](utilities/world-asset-preflight/LICENSE): **MIT**, standalone CLI and shared parser.
+
 - [P3D Validator](utilities/p3d-validator/LICENSE): **GPL-3.0-or-later**, independently authored.
 - [Crashday to Blender Exporter](addons/crashday-exporter/LICENSE): **GPL-2.0-only**
   for the combined addon due to bundled Wurunduk GPLv2. Upstream attribution
