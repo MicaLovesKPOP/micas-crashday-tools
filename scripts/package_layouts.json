@@ -470,5 +470,36 @@
         }
       ]
     }
+  ],
+  "generated_copies": [
+    {
+      "component": "native-tile-preview",
+      "canonical": "shared/native-tile-preview/native_tile_preview.py",
+      "license": "GPL-2.0-or-later",
+      "targets": [
+        {
+          "module": "tile-splitter",
+          "source": "crashday_tile_splitter/native_tile_preview.py",
+          "transform": "identity"
+        },
+        {
+          "module": "world-builder",
+          "source": "crashday_world_builder/offline_backend/native_tile_preview.py",
+          "transform": "identity"
+        }
+      ]
+    },
+    {
+      "component": "checkpoint-route",
+      "canonical": "addons/world-builder/crashday_world_builder/checkpoint_routes.py",
+      "license": "GPL-3.0-or-later",
+      "targets": [
+        {
+          "module": "world-builder",
+          "source": "crashday_world_builder/offline_backend/checkpoint_routes.py",
+          "transform": "route-validator-relative-v1"
+        }
+      ]
+    }
   ]
 }

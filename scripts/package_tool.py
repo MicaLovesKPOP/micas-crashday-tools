@@ -97,8 +97,74 @@ def load_specs(root=ROOT):
     require(set(result)==set(mods), "Missing package layout")
     return result
 
+def generated_sources(module, root, specs):
+    """Return the explicit license-compatible generated members for one module."""
+    layouts = json.loads(source_bytes(Path(root).absolute()/"scripts/package_layouts.json"))
+    targets = {}
+    seen_components = set()
+    seen_targets = set()
+    for component in layouts.get("generated_copies", []):
+        cid = component["component"]
+        canonical = safe_rel(component["canonical"])
+        require(ID.fullmatch(cid) and cid not in seen_components and canonical.suffix==".py",
+                "Invalid shared component")
+        seen_components.add(cid)
+        license_id = component["license"]
+        # A component either has its own documented license or belongs to a
+        # released module. Only the explicit compatible license flow is used.
+        if canonical.parts[0]=="shared":
+            require(canonical.parent.as_posix()=="shared/"+cid and license_id=="GPL-2.0-or-later",
+                    "Unexpected shared source license/path")
+            directory=Path(root).absolute()/canonical.parent
+            notice=source_bytes(directory/"NOTICE.md")
+            license_bytes=source_bytes(directory/"LICENSE")
+            splitter,split_layout,_=specs["tile-splitter"]
+            license_pin=next(row["sha256"] for row in split_layout["members"] if row["source"]=="LICENSE")
+            require(license_id.encode() in notice and b"MicaLovesKPOP" in notice
+                    and sha(license_bytes)==license_pin, "Shared license/provenance mismatch")
+        else:
+            owners=[mid for mid,(m,_,_) in specs.items()
+                    if canonical.as_posix().startswith(m["public_dir"]+"/")]
+            require(len(owners)==1 and specs[owners[0]][0]["license"]==license_id,
+                    "Canonical component license mismatch")
+        for dest in component["targets"]:
+            mid=dest["module"]
+            path=safe_rel(dest["source"]).as_posix()
+            transform=dest["transform"]
+            require(mid in specs and (mid,path) not in seen_targets, "Duplicate/unknown shared target")
+            seen_targets.add((mid,path))
+            m,layout,_=specs[mid]
+            require(any(row["source"]==path and not row["locked_in_candidate"] for row in layout["members"]),
+                    "Unknown or locked generated target")
+            require(license_id==m["license"] or
+                    (license_id=="GPL-2.0-or-later" and m["license"]=="GPL-3.0-or-later"),
+                    "Incompatible generated component license")
+            require(canonical.as_posix()!=m["public_dir"]+"/"+path and
+                    transform in ("identity","route-validator-relative-v1"), "Unsafe shared transform")
+            if mid==module:
+                raw=source_bytes(Path(root).absolute()/canonical)
+                require(not PRIVATE.search(raw), "Private-looking shared source")
+                if transform=="route-validator-relative-v1":
+                    before=b"    from validate_p3d import Reader, validate_bytes"
+                    after=b"    from .validate_p3d import Reader, validate_bytes"
+                    require(raw.count(before)==1, "Checkpoint route namespace contract changed")
+                    raw=raw.replace(before,after,1)
+                    for node in ast.walk(ast.parse(raw)):
+                        if isinstance(node,ast.ImportFrom):
+                            require(not (node.level==0 and node.module=="validate_p3d"), "Unhandled validator import")
+                        elif isinstance(node,ast.Import):
+                            require(all(alias.name!="validate_p3d" for alias in node.names), "Unhandled validator import")
+                targets[path]=raw
+    require(not any(canonical==specs[mid][0]["public_dir"]+"/"+path
+                    for canonical in (c["canonical"] for c in layouts.get("generated_copies",[]))
+                    for mid,path in seen_targets), "Generated source chain is unsupported")
+    return targets
+
+
 def collect(module, root=ROOT, candidate=False):
-    m, layout, prefix = load_specs(root)[module]
+    specs=load_specs(root)
+    m, layout, prefix = specs[module]
+    generated=generated_sources(module,root,specs)
     folder = Path(root).absolute()/m["public_dir"]
     nonredirected(folder)
     expected = {r["source"] for r in layout["members"]}
@@ -117,6 +183,14 @@ def collect(module, root=ROOT, candidate=False):
     for row in layout["members"]:
         name = row["archive"]
         raw = source_bytes(folder/row["source"])
+        if row["source"] in generated:
+            canonical=generated[row["source"]]
+            # Frozen distribution copies must agree exactly. A candidate may
+            # generate from an edited canonical source while the checked-in
+            # distribution copy remains at its last approved digest.
+            require(raw==canonical or (candidate and sha(raw)==row["sha256"]),
+                    "Generated copy drift; edit its canonical source: "+name)
+            raw=canonical
         if row["line_endings"] == "crlf":
             raw = raw.replace(b"\r\n",b"\n").replace(b"\n",b"\r\n")
         if not candidate or row["locked_in_candidate"]:

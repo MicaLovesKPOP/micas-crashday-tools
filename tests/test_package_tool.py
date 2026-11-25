@@ -32,6 +32,7 @@ class PackageToolTests(unittest.TestCase):
         (root/"scripts").mkdir()
         shutil.copyfile(ROOT/"docs/catalog.json", root/"docs/catalog.json")
         shutil.copyfile(ROOT/"scripts/package_layouts.json",root/"scripts/package_layouts.json")
+        shutil.copytree(ROOT/"shared",root/"shared")
         m,_,_ = tool.load_specs()[mid]
         target = root/m["public_dir"]
         shutil.copytree(ROOT/m["public_dir"],target,ignore=shutil.ignore_patterns("__pycache__"))
@@ -75,6 +76,46 @@ class PackageToolTests(unittest.TestCase):
                 p.write_bytes(p.read_bytes()+b"\n# unapproved change\n")
                 with self.assertRaisesRegex(ValueError,"Frozen member hash"):
                     tool.package_bytes("crashday-exporter",root,candidate=True)
+
+    def test_shared_preview_generated_from_one_source(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root,target=self.fixture(folder,"tile-splitter")
+            wb=tool.load_specs()["world-builder"][0]["public_dir"]
+            shutil.copytree(ROOT/wb,root/wb,ignore=shutil.ignore_patterns("__pycache__"))
+            source=root/"shared/native-tile-preview/native_tile_preview.py"
+            source.write_bytes(source.read_bytes()+b"\n# canonical local edit\n")
+            for mid,member in (("tile-splitter","crashday_tile_splitter/native_tile_preview.py"),
+                               ("world-builder","crashday_world_builder/offline_backend/native_tile_preview.py")):
+                with self.assertRaisesRegex(ValueError,"Generated copy drift"):
+                    tool.package_bytes(mid,root)
+                with zipfile.ZipFile(io.BytesIO(tool.package_bytes(mid,root,candidate=True))) as z:
+                    self.assertEqual(z.read(member),source.read_bytes())
+            copy=target/"crashday_tile_splitter/native_tile_preview.py"
+            copy.write_bytes(copy.read_bytes()+b"\n# edit wrong copy\n")
+            with self.assertRaisesRegex(ValueError,"Generated copy drift"):
+                tool.package_bytes("tile-splitter",root,candidate=True)
+
+    def test_checkpoint_route_single_source_and_relative_import(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root,target=self.fixture(folder,"world-builder")
+            source=target/"crashday_world_builder/checkpoint_routes.py"
+            source.write_bytes(source.read_bytes()+b"\n# canonical route edit\n")
+            with zipfile.ZipFile(io.BytesIO(tool.package_bytes("world-builder",root,candidate=True))) as z:
+                backend=z.read("crashday_world_builder/offline_backend/checkpoint_routes.py")
+                self.assertEqual(backend,source.read_bytes().replace(
+                    b"from validate_p3d import Reader, validate_bytes",
+                    b"from .validate_p3d import Reader, validate_bytes"))
+            source.write_bytes(source.read_bytes()+b"\nimport validate_p3d\n")
+            with self.assertRaisesRegex(ValueError,"Unhandled validator import"):
+                tool.package_bytes("world-builder",root,candidate=True)
+
+    def test_shared_license_cannot_be_silently_changed(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root,_=self.fixture(folder,"tile-splitter")
+            p=root/"shared/native-tile-preview/LICENSE"
+            p.write_bytes(p.read_bytes()+b"\nchanged\n")
+            with self.assertRaisesRegex(ValueError,"Shared license/provenance"):
+                tool.package_bytes("tile-splitter",root,candidate=True)
 
     def test_extra_source_and_unsafe_recipe_are_rejected(self):
         with tempfile.TemporaryDirectory() as folder:

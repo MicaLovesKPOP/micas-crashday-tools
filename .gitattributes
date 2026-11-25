@@ -16,3 +16,6 @@ addons/world-builder/** -text
 # three historical Validator document CRLF transformations explicitly.
 addons/crashday-exporter/** -text
 utilities/p3d-validator/** -text
+
+# Canonical shared first-party preview source and license bytes.
+shared/native-tile-preview/** -text
