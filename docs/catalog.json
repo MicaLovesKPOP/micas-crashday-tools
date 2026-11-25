@@ -1,0 +1,97 @@
+{
+  "schema": "micas-crashday-tools-catalog/v1",
+  "repository": "MicaLovesKPOP/micas-crashday-tools",
+  "modules": [
+    {
+      "id": "crashday-exporter",
+      "version": "0.1.0",
+      "tag": "exporter-v0.1.0",
+      "commit": "a8adb3866eb0d3c7a20bf9c72b38e964c35aec98",
+      "public_dir": "addons/crashday-exporter",
+      "license": "GPL-2.0-only",
+      "asset": "micas-crashday-tools-exporter-v0.1.0.zip",
+      "sha256": "895f4982eae13cf72556326a2324ff41aab3450217aacbbf52b98237b91207ab",
+      "title": "Crashday to Blender Exporter",
+      "group": "import",
+      "requirements": "Blender and installed Crashday assets",
+      "summary": "Read TRK/TRK2 tracks into editable Blender scenes with terrain, models, textures and source-constrained approximate vegetation."
+    },
+    {
+      "id": "tile-splitter",
+      "version": "0.4.7",
+      "tag": "tile-splitter-v0.4.7",
+      "commit": "9ec0d53dcbed0a8584ee61545a6d4ccf2f918ee1",
+      "public_dir": "addons/tile-splitter",
+      "license": "GPL-2.0-or-later",
+      "asset": "micas-crashday-tools-tile-splitter-v0.4.7.zip",
+      "sha256": "74d22b5bdda645f0891fd9ef9fb95ddd6f80eda38704414533a4aa6ed33d9764",
+      "title": "Tile Splitter",
+      "group": "create",
+      "requirements": "Blender",
+      "summary": "Split meshes into tiles, export native P3D models and generate overhead editor previews."
+    },
+    {
+      "id": "world-builder",
+      "version": "0.2.0",
+      "tag": "world-builder-v0.2.0",
+      "commit": "9ec0d53dcbed0a8584ee61545a6d4ccf2f918ee1",
+      "public_dir": "addons/world-builder",
+      "license": "GPL-3.0-or-later",
+      "asset": "micas-crashday-tools-world-builder-v0.2.0.zip",
+      "sha256": "ac5625bc0a5bd15a5874f01d015430926c832d1031a900af4201d06829526a78",
+      "title": "World Builder",
+      "group": "create",
+      "requirements": "Blender; Tile Splitter for integrated authoring",
+      "summary": "Author checkpoints and allowed game modes, validate and build new offline Crashday maps."
+    },
+    {
+      "id": "p3d-validator",
+      "version": "0.4.0",
+      "tag": "p3d-validator-v0.4.0",
+      "commit": "ab5bf093a20364fc769a30d6d7c3f1b644a537cc",
+      "public_dir": "utilities/p3d-validator",
+      "license": "GPL-3.0-or-later",
+      "asset": "micas-crashday-tools-p3d-validator-v0.4.0.zip",
+      "sha256": "be1b11140b3d4d0a406604d98fafb4d185837fe70d3b7b8fba61d3fe89648622",
+      "title": "P3D Validator",
+      "group": "inspect",
+      "requirements": "Python 3.7+",
+      "summary": "Check P3D structure, bounds, archives and Tile Splitter manifests without writing game files."
+    },
+    {
+      "id": "world-asset-preflight",
+      "version": "0.2",
+      "tag": "world-asset-preflight-v0.2",
+      "commit": "abd4c91824be0c4a83651f56ea67b64ee2c8a3cf",
+      "public_dir": "utilities/world-asset-preflight",
+      "license": "MIT",
+      "asset": "micas-crashday-tools-world-asset-preflight-v0.2.zip",
+      "sha256": "039ee88cbb499a734a2bca539a08e8242a9ccdd215fc09d0518abda1d3dd5cf7",
+      "title": "World Asset Preflight",
+      "group": "inspect",
+      "requirements": "Python 3.7+",
+      "summary": "Check CFL/VEG definitions and asset dependencies in loose folders and archives."
+    }
+  ],
+  "tested_map_creation_pair": {
+    "modules": [
+      {
+        "id": "tile-splitter",
+        "version": "0.4.7",
+        "tag": "tile-splitter-v0.4.7",
+        "asset": "micas-crashday-tools-tile-splitter-v0.4.7.zip",
+        "sha256": "74d22b5bdda645f0891fd9ef9fb95ddd6f80eda38704414533a4aa6ed33d9764",
+        "commit": "9ec0d53dcbed0a8584ee61545a6d4ccf2f918ee1"
+      },
+      {
+        "id": "world-builder",
+        "version": "0.2.0",
+        "tag": "world-builder-v0.2.0",
+        "asset": "micas-crashday-tools-world-builder-v0.2.0.zip",
+        "sha256": "ac5625bc0a5bd15a5874f01d015430926c832d1031a900af4201d06829526a78",
+        "commit": "9ec0d53dcbed0a8584ee61545a6d4ccf2f918ee1"
+      }
+    ],
+    "evidence": "Exact paired automated Blender 3.4.1 workflow; underlying components tested on 2.80, 2.83.20 and 4.5.16 too. See module guides for limits."
+  }
+}

@@ -1,0 +1,42 @@
+name: Toolkit source and packaging tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source-smoke:
+    name: Source smoke (${{ matrix.os }}, Python ${{ matrix.python-version }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+        python-version: ['3.9', '3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify generated documentation
+        run: python -B scripts/render_catalog.py --check
+      - name: Run source-only regressions and packaging checks
+        run: python -B -m unittest discover -s tests -v
+  result:
+    name: Toolkit CI result
+    if: always()
+    needs: source-smoke
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require all matrix jobs to pass
+        env:
+          MATRIX_RESULT: ${{ needs.source-smoke.result }}
+        run: test "$MATRIX_RESULT" = success
