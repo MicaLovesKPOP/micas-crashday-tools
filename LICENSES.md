@@ -1,5 +1,8 @@
 # License scopes
 
+- [Tile Splitter](addons/tile-splitter/LICENSE): **GPL-2.0-or-later**.
+- [World Builder](addons/world-builder/LICENSE): **GPL-3.0-or-later**, including the modified Validator component.
+
 - [World Asset Preflight](utilities/world-asset-preflight/LICENSE): **MIT**, standalone CLI and shared parser.
 
 - [P3D Validator](utilities/p3d-validator/LICENSE): **GPL-3.0-or-later**, independently authored.

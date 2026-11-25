@@ -1,0 +1,31 @@
+{
+  "files": {
+    "crashday_world_builder/CHANGELOG.md": "8fbec96d4275149cb2718bde26cd3614ac9e4dfe7049f5864a73c5a1222d8db3",
+    "crashday_world_builder/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "crashday_world_builder/NOTICE.md": "b1ee7b51b2433477ecd1f59d26d23f329362d6f25d5ba86e5211100c008ede51",
+    "crashday_world_builder/README.md": "b185b621b4cdecdff570e773d5863d8abbca2ca0942fb52b0cfc2a68d6e7ced0",
+    "crashday_world_builder/__init__.py": "4321408eb24c8b77233acf25c7688b7e63f832e83d9f18166a18f3f4d93ac747",
+    "crashday_world_builder/build_ui_model.py": "eac9baa166d815002e2c6626e2a3cc91dce304a8d70c774a1ab0de41819199f9",
+    "crashday_world_builder/checkpoint_routes.py": "31bc0a7b416f2f61b39bda32cf0ae0e9400fa52021bdeff32aa31764c05b873c",
+    "crashday_world_builder/macro_preview.py": "87f7b444a131648fdf206371292882fd17307dde508db1a9cd02c935d2a55fae",
+    "crashday_world_builder/offline_backend/__init__.py": "f12630835b06fb7aa2f850c6b126119fa60b830865a7a5c0b10c8c39e3a21961",
+    "crashday_world_builder/offline_backend/author_trk_offline.py": "b15836a74d98aab52512848e58d8c6fe83dda738fb5dbe85dd0c8b83de88a677",
+    "crashday_world_builder/offline_backend/blender_checkpoint_carve.py": "b20467eb4e39e37673e9aeb6bdc7a52334b7c5d4239484882687a887c401104d",
+    "crashday_world_builder/offline_backend/build_route_world.py": "5e8f59722456e89b1b621e525c7ead4e7a158c23729c89ec9078eef9ccb960f2",
+    "crashday_world_builder/offline_backend/checkpoint_macro_carve.py": "1eb2a63fdd9aef1091055bc0fd125b9f3d5bb3da9e37cc4558332d536e7aa762",
+    "crashday_world_builder/offline_backend/checkpoint_routes.py": "7b88559c074b01c085424f989167dacf35ad558bdfa666e6b8985a8a738b5fef",
+    "crashday_world_builder/offline_backend/macro_native_layout.py": "cad69676f18ce42dbd6ae36033e64e47b31c521398df15284e701d0f09e04cbe",
+    "crashday_world_builder/offline_backend/native_tile_preview.py": "8fcd6b2b46a861a2d533ec25e4de914b7ce258449de7d0cb0cdebe68c35b0bc9",
+    "crashday_world_builder/offline_backend/source_tex_stage.py": "fdb40bce3e359d3c9c7051a07857fd854c933f49945d86c0121575f231c9ac4d",
+    "crashday_world_builder/offline_backend/source_tga_stage.py": "9172b4d643437bef8f2dc5523d8186fec682cf71e57b833a9664fa6e1d1ad864",
+    "crashday_world_builder/offline_backend/source_tile_preview_stage.py": "da55626a58604d8eaa0c22ef25ec824ebefda338c544dd7878034b5192e8ddc4",
+    "crashday_world_builder/offline_backend/stage_tile_cfls.py": "ca394888e2295b5a4a5c3e3e3d119adfb981949cdb9605b410617e1ec771b644",
+    "crashday_world_builder/offline_backend/validate_p3d.py": "183378d33f40fbae9ded1d9692435f131e23fb5d8ad596fcc66e6eb4cd8953fb",
+    "crashday_world_builder/route_ui_model.py": "b2c5052fd5c53fc1297dc3bbb44468194d3aa4c57ba1fdd54a3b3a0d9270d9b0",
+    "crashday_world_builder/viewport_routes.py": "b6aad92a344b0525e97834d27fda355a1c64e7652267c598ab16719a8b72b58e"
+  },
+  "license": "GPL-3.0-or-later",
+  "module": "world-builder",
+  "schema": "micas-crashday-release-source/v1",
+  "version": "0.2.0"
+}

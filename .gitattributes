@@ -7,3 +7,7 @@ addons/crashday-exporter/crashday_track_importer/wurunduk_p3d.py -text
 
 # Preserve the independently qualified Preflight release bytes.
 utilities/world-asset-preflight/** -text
+
+# Preserve exact paired release source and document bytes.
+addons/tile-splitter/** -text
+addons/world-builder/** -text

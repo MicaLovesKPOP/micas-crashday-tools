@@ -1,0 +1,17 @@
+{
+  "files": {
+    "crashday_tile_splitter/CHANGELOG.md": "4e9f9cb87dd643bf7ea3ec4b14da81d2c408065be530d303cec1534585f2232e",
+    "crashday_tile_splitter/LICENSE": "f3d0f98935410a5196f0df27c4928a86a1822e6b9f49f9312fefb08b35e1e07c",
+    "crashday_tile_splitter/NOTICE.md": "b2b2f83091077748ace857b4ba7cccc28c567ea7be6c08207065d4bc64544474",
+    "crashday_tile_splitter/README.md": "a694b14e35dfee9810c9aa3ca55bcb91b535b919d1f5a60105c2f230c6b4424b",
+    "crashday_tile_splitter/__init__.py": "2aedace815284d328ff3d1fc92c099cf7653fbc5e42a887cd4fee594563ffb56",
+    "crashday_tile_splitter/native_tile_preview.py": "8fcd6b2b46a861a2d533ec25e4de914b7ce258449de7d0cb0cdebe68c35b0bc9",
+    "crashday_tile_splitter/p3d_export.py": "3e74da29146558f2680d39c5672490263aa4f917f2dfc34145cc522d715a155c",
+    "crashday_tile_splitter/preview_render.py": "9b5261fde04f422ed5e508c976c2de382d3efddef523740776788228009f8caa",
+    "crashday_tile_splitter/texture_export.py": "4f80c2eaaf3c83172b82101f4b2a69d4b3340436d815a0f14a269442478b8a42"
+  },
+  "license": "GPL-2.0-or-later",
+  "module": "tile-splitter",
+  "schema": "micas-crashday-release-source/v1",
+  "version": "0.4.7"
+}

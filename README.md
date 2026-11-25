@@ -4,6 +4,8 @@ Independent community tools for **Crashday: Redline Edition**.
 Tools have separately versioned releases, separate module licenses and standalone installation.
 
 ## Available now
+- [Tile Splitter v0.4.7](addons/tile-splitter/) - split Blender meshes, export P3Ds and native overhead previews.
+- [World Builder v0.2.0](addons/world-builder/) - author checkpoints and build new offline Crashday maps.
 - [World Asset Preflight v0.2](utilities/world-asset-preflight/) - read-only CFL/VEG dependency checks for loose mod folders and archives; Python 3.7+, MIT. Download from [Releases](https://github.com/MicaLovesKPOP/micas-crashday-tools/releases).
 - [Crashday to Blender Exporter v0.1.0](addons/crashday-exporter/) - read-only TRK/TRK2 import with textures and approximate CFL vegetation. Download from [Releases](https://github.com/MicaLovesKPOP/micas-crashday-tools/releases).
 - [P3D Validator v0.4.0](utilities/p3d-validator/) — read-only Python 3.7+
@@ -11,8 +13,7 @@ Tools have separately versioned releases, separate module licenses and standalon
   Download it from the [Releases](https://github.com/MicaLovesKPOP/micas-crashday-tools/releases) page.
 
 ## Upcoming
-- Derived Tile Splitter — privately tested, pending native game and user acceptance.
-- World Builder, EnvGen and other modules when independently qualified.
+- EnvGen and other modules when independently qualified.
 
 Source of unreleased tools is **not** present in this public repository. It stays in a
 separate owner-only incubator until license, acceptance and rights reviews pass.
